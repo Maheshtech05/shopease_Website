@@ -1,0 +1,675 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header{
+    width:100%;
+    background:#0f172a;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+.logo i{
+    margin-right:8px;
+}
+
+/* Navigation */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li{
+    display:inline;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Cart */
+
+.cart{
+    position:relative;
+    font-size:22px;
+    cursor:pointer;
+}
+
+#cart-count{
+    position:absolute;
+    top:-10px;
+    right:-12px;
+    background:red;
+    color:white;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero{
+    width:100%;
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1512436991641-6745cdb1723?w=1400")
+    center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+/* Shop Button */
+
+.shop-btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+    font-size:18px;
+}
+
+.shop-btn:hover{
+    background:#0284c7;
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   SEARCH SECTION
+========================================== */
+
+.search-section{
+    text-align:center;
+    margin:40px 0;
+}
+
+.search-section input{
+    width:60%;
+    max-width:650px;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:30px;
+    outline:none;
+    font-size:16px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+/* ==========================================
+   CATEGORIES
+========================================== */
+
+.categories{
+    text-align:center;
+    padding:40px 8%;
+}
+
+.categories h2{
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.category-list{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.category-list span{
+    background:#2563eb;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:16px;
+}
+
+.category-list span:hover{
+    background:#1d4ed8;
+    transform:translateY(-4px);
+}
+/* ==========================================
+   PRODUCTS SECTION
+========================================== */
+
+.products{
+    padding:60px 8%;
+    background:#f8fafc;
+}
+
+.products h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+    color:#1e293b;
+}
+
+.product-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+/* ==========================================
+   PRODUCT CARD
+========================================== */
+
+.product-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:0.3s;
+    padding-bottom:20px;
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+/* Product Image */
+
+.product-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* Category Label */
+
+.category{
+    display:inline-block;
+    margin:15px;
+    padding:6px 15px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:500;
+}
+
+/* Product Name */
+
+.product-card h3{
+    margin:0 15px;
+    font-size:24px;
+    color:#1e293b;
+}
+
+/* Price */
+
+.price{
+    margin:10px 15px;
+    font-size:22px;
+    font-weight:bold;
+    color:#16a34a;
+}
+
+/* Description */
+
+.description{
+    margin:0 15px 20px;
+    color:#555;
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.cart-btn,
+.details-btn{
+    display:block;
+    width:90%;
+    margin:10px auto;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+/* Add to Cart */
+
+.cart-btn{
+    background:#2563eb;
+    color:#fff;
+}
+
+.cart-btn:hover{
+    background:#1d4ed8;
+}
+
+/* More Details */
+
+.details-btn{
+    background:#e2e8f0;
+    color:#1e293b;
+}
+
+.details-btn:hover{
+    background:#cbd5e1;
+}
+
+/* ==========================================
+   PRODUCT DETAILS
+========================================== */
+
+.details{
+    display:none;
+    margin:15px;
+    padding:15px;
+    background:#f1f5f9;
+    border-left:4px solid #2563eb;
+    border-radius:8px;
+    line-height:1.8;
+    color:#444;
+    font-size:15px;
+}
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.contact{
+    padding:70px 8%;
+    background:#ffffff;
+}
+
+.contact h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+    color:#1e293b;
+}
+
+/* Contact Form */
+
+#contact-form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* Input Fields */
+
+#contact-form input,
+#contact-form textarea{
+
+    width:100%;
+    padding:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:0.3s;
+}
+
+/* Focus Effect */
+
+#contact-form input:focus,
+#contact-form textarea:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 8px rgba(37,99,235,.3);
+}
+
+/* Textarea */
+
+#contact-form textarea{
+
+    resize:none;
+
+    height:160px;
+}
+
+/* Submit Button */
+
+#contact-form button{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:0.3s;
+}
+
+#contact-form button:hover{
+
+    background:#1d4ed8;
+
+    transform:scale(1.02);
+}
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:50px;
+}
+
+footer h3{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+footer p{
+    margin:10px 0;
+    font-size:16px;
+    color:#e2e8f0;
+}
+
+/* ==========================================
+   SCROLL TO TOP BUTTON
+========================================== */
+
+#topBtn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#2563eb;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    transition:0.3s;
+}
+
+#topBtn:hover{
+    background:#1d4ed8;
+    transform:scale(1.1);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+/* Tablets */
+
+@media(max-width:992px){
+
+    header{
+        padding:18px 5%;
+    }
+
+    nav ul{
+        gap:18px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:20px;
+    }
+
+    .search-section input{
+        width:80%;
+    }
+
+    .products,
+    .categories,
+    .contact{
+        padding:50px 5%;
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero{
+        height:70vh;
+        padding:20px;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .shop-btn{
+        padding:12px 25px;
+        font-size:16px;
+    }
+
+    .search-section input{
+        width:90%;
+    }
+
+    .products h2,
+    .categories h2,
+    .contact h2{
+        font-size:30px;
+    }
+
+    .product-container{
+        grid-template-columns:1fr;
+    }
+
+    .product-card img{
+        height:250px;
+    }
+
+    #contact-form{
+        width:100%;
+    }
+
+    #topBtn{
+        right:20px;
+        bottom:20px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+    .hero-content h1{
+        font-size:28px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    nav ul li a{
+        font-size:15px;
+    }
+
+    .category-list span{
+        font-size:14px;
+        padding:10px 18px;
+    }
+
+    .product-card h3{
+        font-size:22px;
+    }
+
+    .price{
+        font-size:20px;
+    }
+
+    footer h3{
+        font-size:22px;
+    }
+
+    footer p{
+        font-size:14px;
+    }
+
+}
+
+/* ==========================================
+   SMOOTH ANIMATIONS
+========================================== */
+
+.product-card,
+.shop-btn,
+.cart-btn,
+.details-btn,
+.category-list span,
+#contact-form button,
+#topBtn{
+    transition:all .3s ease;
+}
+
+/* ==========================================
+   CUSTOM SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================================
+   SELECTION COLOR
+========================================== */
+
+::selection{
+    background:#2563eb;
+    color:#fff;
+}
